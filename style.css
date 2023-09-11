@@ -16,6 +16,7 @@ h1{
     grid-column: 7/ span 9;
     grid-row: 1;
     margin-top: 10vh;
+    color: green;
 }
 #app {
   
