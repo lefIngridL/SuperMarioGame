@@ -11,12 +11,21 @@ body{
    
     
 }
-h1{
-    width: 110vh;
-    grid-column: 7/ span 9;
-    grid-row: 1;
-    margin-top: 10vh;
-    color: green;
+#h1h{
+    width: 83vh;
+    height: 10vh;
+    grid-column: 6/ span 9;
+    grid-row-end: 2;
+    margin-top: 7vh;
+    border: 10px;
+    border-color: rgba(255, 255, 255, 0.397);
+    border-style: inset;
+    border-radius: 4vh;
+    font-size: 50px;
+    background-image:-moz-radial-gradient(black,white);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+    -webkit-text-fill-color: rgb(58, 226, 43);
 }
 #app {
   

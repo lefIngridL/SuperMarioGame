@@ -16,7 +16,7 @@ var a;
 updateViewStart();
 function updateViewStart(){
     html = /*html*/ `
-  <h1>Choose your Champion!</h1>
+  <div id="h1h">Choose your Champion!</div>
     <!--<input onclick="choose(this)" class="character" type="image" id="bowser" src="images/bowser (1).png">-->
     <!--<input onclick="choose(this)" class="character" type="image" id="bwmush" src="images/bwsmush__1_-removebg-preview.png">-->
     <input onclick="choose(this)" class="character" type="image" id="luigi" src="images/luigi__1_-removebg-preview.png">
