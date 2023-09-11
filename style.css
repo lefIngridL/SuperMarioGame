@@ -1,36 +1,32 @@
-
-
-#app {
+body{
     display: flex;
-    justify-content:  center;
+    
     padding-inline: 2vh;
+    background-repeat: no-repeat;
     background-size: cover;
+   
     background-position-x: center;
     background-position-y: center;
-    margin: none;
-    background: no-repeat center/100% url("images/super-mario-bros-background-wqhd-1440p-wallpaper.jpg");
-   /*display: grid;
-   //grid-template-columns: 50vh 50vh 50vh;
-   //grid-template-rows: 25vh 25vh 25vh;*/
-    justify-content: center; 
+    background-image: no-repeat center/100%;
+   
     
 }
-#box{
-    padding-inline: 20vh;
-    padding-top: 3vh;
+h1{
+    width: 110vh;
+    grid-column: 7/ span 9;
+    grid-row: 1;
+    margin-top: 10vh;
+}
+#app {
+  
+    
     background-repeat: repeat;
     display: grid;
-    grid-template-columns:  11vh 11vh 11vh 11vh 11vh 11vh 11vh 11vh 11vh 11vh;
-    grid-template-rows: 35vh 35vh 15vh;
+    grid-template-columns:  10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh;
+    grid-template-rows: 25vh 20vh 20vh 20vh;
+    
 }
-#box2{
-    padding-inline: 20vh;
-    padding-top: 3vh;
-    background-repeat: no-repeat;
-    display: grid;
-    grid-template-columns:  11vh 11vh 11vh 11vh 11vh 11vh 11vh 11vh 11vh 11vh;
-    grid-template-rows: 35vh 35vh 15vh;
-}
+
 
 .character{
     margin-top: 1.5vh;
@@ -62,60 +58,85 @@
     max-height: 30vh;
     max-width: 35vh;
     grid-row: 2;
-    grid-column: 7/8;
-    margin-top: 17vh;
-    margin-left: 8vh;
+    grid-column: 8/ span 9;
+    margin-top: 19vh;
+    margin-left: 15vh;
 }
 .bowserFight{
-    
+    height: 40vh;
+    grid-row: 2/span 4;
+    margin-top: 13vh;
+    margin-right: 8vh;
 }
 #bowser{
-    grid-column: 1/3;
+    grid-row: 1;
+    grid-column: 7/ span 9;
     margin-left: 3vh;
 }
 #bwmush{
-    grid-column: 4/6;
-    margin-left: 4.5vh;
+    grid-row: 1;
+    grid-column: 8/ span 9;
+    margin-left: 5vh;
 }
 
 #luigi{
-    grid-column: 3;
+    grid-column: 7;
     grid-row: 2;
     padding-inline: 6vh;
     margin-left: 10vh;
 }
 
 #mario{
-    grid-column: 1;
+    grid-column: 5;
     grid-row: 2;
     margin-left: 3vh;
 }
 
 #peach{
-    grid-column: 6;
+    grid-column: 10;
     grid-row: 2;
-    margin-left: 5.5vh;
+    margin-left: 7vh;
     padding-inline: 2vh;
     
 }
 
 #toad{
-    grid-column-end: 8;
-    margin-left: 9vh;
+    grid-row: 1;
+    grid-column-end: 12;
+    margin-left: 10vh;
     
 }
 
 #yoshi{
-    grid-column-end:9 ;
+    grid-column-end:13 ;
     grid-row: 2;
-    margin-left: 9vh;
+    margin-left: 11vh;
 }
 
 #btn{
     height: 6vh;
     width: 10vh;
-    grid-column: 5/6;
-    grid-row: 3;
+    grid-column: 9;
+    grid-row: 4;
     margin-left: 10vh;
     border-radius: 2vh;
+}
+
+
+#figAt{
+    grid-column: 9/ span 11;
+    width: 20vh;
+    height: 5vh;
+}
+#bowAt{
+    grid-column: 2 /span 4;
+    width: 20vh;
+    height: 5vh;
+}
+
+#rock{
+    height: 50vh;
+    grid-row-end:3;
+    margin-top: 25vh;
+    grid-column-end: 2;
 }
