@@ -20,7 +20,7 @@ body{
     border: 10px;
     border-color: rgba(255, 255, 255, 0.397);
     border-style: inset;
-    border-radius: 4vh;
+    border-radius: 4dvh;
     font-size: 50px;
     background-image:-moz-radial-gradient(black,white);
     -webkit-text-stroke-width: 2px;
