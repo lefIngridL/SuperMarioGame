@@ -83,15 +83,17 @@ function updateViewFight() {
     <div id="myProgressChamp">
         <div id="champHp">HP: </div>
     </div>
+    <div id="attackCounter">
     <p id="countHero">Hero Attacks: ${countHero}</p>
     <p id="countBowser">Bowser Attacks: ${countBowser}</p>
+    </div>
     <input  class="rock" type="image" id="rock" src="images/pngegg.png">
     <input  class="bowserFight" type="image" id="bowser1" src="images/bowser (1).png">
-    <input  class="hideCharacter" type="image" id="bwmush1" src="images/bwsmush__1_-removebg-preview.png">
+    <input  class="fightMode" type="image" id="bwmush1" src="images/bwsmush__1_-removebg-preview.png">
     <input  class="hideCharacter" type="image" id="luigi1" src="images/luigiSpeil.png">
     <input  class="hideCharacter" type="image" id="mario1" src="images/marioSpeil.png">
     <input  class="hideCharacter" type="image" id="peach1" src="images/peach (1).png">
-    <input  class="hideCharacter" type="image" id="toad1" src="images/toad__1_-removebg-preview (1).png">
+    <input  class="character" type="image" id="toad1" src="images/toad__1_-removebg-preview (1).png">
     <input  class="hideCharacter" type="image" id="yoshi1" src="images/yoshi (1).png">
     <input type="button" value="Bowser Attack" id="bowAt" onclick="bowserAttack(countBowser)">
     <input type="button" value="Fighter Attack" id="figAt" onclick="heroAttack(countHero)" >

@@ -154,15 +154,31 @@ body{
 
 #countHero{
   font-size: 3dvh;
-  margin-right: 10dvh;
-  grid-column: 1;
+  
+  
 }
 #countBowser{
  font-size: 3dvh;
- grid-column: 3;
+ 
  
 }
-
+#attackCounter{
+    height: 15dvh;
+    width: 25dvh;
+    padding-inline: 2dvh;
+    padding-bottom: 4dvh;
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: 1/ span 3;
+    grid-row: 1/ span 1;
+    font-weight: bold;
+    border-color: rgb(71, 189, 24);
+    border-width: 3px;
+    background-color: transparent;
+    border-style:ridge;
+    border-radius:3dvh;
+    margin-top: 1dvh ;
+}
 
 #myProgressBowser{
     width: 100%;
