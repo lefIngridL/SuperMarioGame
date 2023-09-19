@@ -89,7 +89,7 @@ function updateViewFight() {
     </div>
     <input  class="rock" type="image" id="rock" src="images/pngegg.png">
     <input  class="bowserFight" type="image" id="bowser1" src="images/bowser (1).png">
-    <input  class="fightMode" type="image" id="bwmush1" src="images/bwsmush__1_-removebg-preview.png">
+    <input  class="mush" type="image" id="bwmush1" src="images/bwsmush__1_-removebg-preview.png">
     <input  class="hideCharacter" type="image" id="luigi1" src="images/luigiSpeil.png">
     <input  class="hideCharacter" type="image" id="mario1" src="images/marioSpeil.png">
     <input  class="hideCharacter" type="image" id="peach1" src="images/peach (1).png">
