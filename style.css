@@ -81,6 +81,25 @@ body{
     margin-top: 28dvh;
     margin-left: 5dvh;
 }
+.mush{
+    height: 15dvh;
+}
+#toad1{
+    position: relative;
+    top: 69dvh;
+    left: 42dvw;
+    /*padding: 2dvh;
+    border-radius: 6dvw;
+    background-image: -webkit-radial-gradient( rgb(0, 255, 0), transparent, rgb(0, 255, 0));
+*/}
+#bwmush1{
+position: relative;
+top: 39dvh;
+right: 5dvw;
+/*padding : 2dvh;
+border-radius: 6dvw;
+background-image: -webkit-radial-gradient(black, transparent, red);
+*/}
 #bowser{
     grid-row: 1;
     grid-column: 7/ span 9;

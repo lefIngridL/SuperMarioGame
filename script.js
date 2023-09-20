@@ -37,8 +37,11 @@ let yoshiHp = 80;
 let luigiHp = 140;
 var a;
 var heroHp;
+var newHeroHp;
 var countHero = 0;
 var countBowser = 0;
+var countHeroHeal = 0;
+var countBowserHeal = 0;
 let xFactorH;
 var i;
 var width;
@@ -86,16 +89,18 @@ function updateViewFight() {
     <div id="attackCounter">
     <p id="countHero">Hero Attacks: ${countHero}</p>
     <p id="countBowser">Bowser Attacks: ${countBowser}</p>
+    <p id="countBowserHeal">Bowser heals: ${countBowserHeal}</p>
+    <p id="countHeroHeal">Hero heals: ${countHeroHeal}</p>
     </div>
     <input  class="rock" type="image" id="rock" src="images/pngegg.png">
     <input  class="bowserFight" type="image" id="bowser1" src="images/bowser (1).png">
-    <input  class="mush" type="image" id="bwmush1" src="images/bwsmush__1_-removebg-preview.png">
+    <input  class="mush" type="image" id="bwmush1" src="images/bwsmush__1_-removebg-preview.png" onclick="healBowser()">
     <input  class="hideCharacter" type="image" id="luigi1" src="images/luigiSpeil.png">
     <input  class="hideCharacter" type="image" id="mario1" src="images/marioSpeil.png">
     <input  class="hideCharacter" type="image" id="peach1" src="images/peach (1).png">
-    <input  class="character" type="image" id="toad1" src="images/toad__1_-removebg-preview (1).png">
+    <input  class="mush" type="image" id="toad1" src="images/toad__1_-removebg-preview (1).png" >
     <input  class="hideCharacter" type="image" id="yoshi1" src="images/yoshi (1).png">
-    <input type="button" value="Bowser Attack" id="bowAt" onclick="bowserAttack(countBowser)">
+    <input type="button" value="Bowser Attack" id="bowAt" onclick="bowserAttack(countBowser, countHeroHeal)">
     <input type="button" value="Fighter Attack" id="figAt" onclick="heroAttack(countHero)" >
    
     `;
@@ -116,6 +121,13 @@ buttonBowser.addEventListener("click", function(){
     console.log(countBowser);
     countDisplayBowser.innerHTML = `Bowser Attacks:` + countBowser;
 
+});
+var buttonHealHero= document.querySelector("#toad1");
+var countDisplayHealHero = document.querySelector("#countHeroHeal");
+buttonHealHero.addEventListener("click", function(){
+    countHeroHeal++;
+    countDisplayHealHero.innerHTML = `Hero Heals:` + countHeroHeal;
+    healHero();
 });
 }
 
@@ -197,14 +209,18 @@ function heroHealth(name) {
     return heroHp;
 }
 
-/*function heroAttack() {
 
-}*/
 
-function bowserAttack() {
+function healHero(){
+    if( newHeroHp < heroHp){
+        newHeroHp += 10;
+    }
+    
+    console.log(newHeroHp);
+    return newHeroHp;
+    
 
 }
-
 
 
 function heroAttack(count) {
@@ -257,8 +273,8 @@ xFactorH = count+1;
 
 }
 
-function bowserAttack(count) {
- xFactorB = count+1;
+function bowserAttack(countA, countH) {
+ xFactorB = (countA)-(countH);
      iB = 100;
     if (iB == 100) {
         iB = 1;
@@ -292,10 +308,22 @@ function bowserAttack(count) {
             
             widthB = widthB - (10*xFactorB)*hpFactor; 
             elemB.style.width = widthB + "%";
-            elemB.innerHTML = "HP:" + (heroHp - 10*xFactorB);
+            
+            if(elemB.innerHTML == "HP:" + heroHp){
+                elemB.innerHTML = "HP:" + (heroHp - 10*xFactorB);
+                console.log("affirm");
+            }
+            else {
+                newHeroHp = heroHp - 10*xFactorB;
+                elemB.innerHTML = "HP:" + (newHeroHp - 10*xFactorB); 
+            }
+            
+            
             if( elemB.innerHTML == "HP:" + 0){
                 alert("Bowser vant!");
             }
+            console.log(newHeroHp);
+            return newHeroHp;
         }
         
 
@@ -303,6 +331,10 @@ function bowserAttack(count) {
 
 }
 
+
+function healBowser(){
+
+}
 
 
 
